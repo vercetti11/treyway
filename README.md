@@ -78,7 +78,7 @@ State can be stored to `localstorage` to persist an accidental reload; alternati
 React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form), but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
 <br/>
 
-All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern).
+All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern) in this particular case.
 
 > Programing it's like gardening.
 
