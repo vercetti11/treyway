@@ -1,7 +1,7 @@
 <img src="https://firebasestorage.googleapis.com/v0/b/menuenapp-prod.appspot.com/o/treyway1.gif?alt=media&token=5917f2b9-a017-4083-843e-15931fb7c70d" alt="fixx" >
 
 # Summary
-**Main logic** in **86** idiomatic `lines of code`<br/>
+**Main logic** in `86 idiomatic lines of code`<br/>
 **No third party library:** I previously worked with [React Hook Form](https://github.com/react-hook-form/react-hook-form), although for this job, I achieved the [spec](https://firebasestorage.googleapis.com/v0/b/menuenapp-prod.appspot.com/o/Tray.io%20Frontend%20Engineer%20-%20Technical%20Exercise%20(2).pdf?alt=media&token=8643bc4b-7749-4b94-b3ca-0c38d0a1c16d) requirements and further without it.<br/>
 **Built on Hooks:** controlled navigation progress with state persistence.<br/>
 [**Live link**](https://treyway.netlify.app) 👈 onClick
