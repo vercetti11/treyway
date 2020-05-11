@@ -51,6 +51,9 @@ const [progress, setProgress] = useState(0);
       {page}
     </button>
   ))}
+  // const [activePage, setActivePage] can use the strings inside the array instead of 
+  // their indexes, but then the cases in the switch would also depend on strings which 
+  // are more cumbersome to write. Legibility is traded for extensibility.
   
   {...}
   
