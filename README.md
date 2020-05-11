@@ -1,9 +1,10 @@
 <img src="https://firebasestorage.googleapis.com/v0/b/menuenapp-prod.appspot.com/o/treyway1.gif?alt=media&token=5917f2b9-a017-4083-843e-15931fb7c70d" alt="fixx" >
 
 # Summary
-**Main logic** in 86 idiomatic `lines of code`<br/>
-**No third party library:** I previously worked with [React Hook Form](https://github.com/react-hook-form/react-hook-form), although for this job, I achieved the [spec](https://firebasestorage.googleapis.com/v0/b/menuenapp-prod.appspot.com/o/Tray.io%20Frontend%20Engineer%20-%20Technical%20Exercise%20(2).pdf?alt=media&token=8643bc4b-7749-4b94-b3ca-0c38d0a1c16d) requirements independently and further.<br/>
-**Built on Hooks:** controlled navigation progress with state persistence.
+**Main logic** in **86** idiomatic `lines of code`<br/>
+**No third party library:** I previously worked with [React Hook Form](https://github.com/react-hook-form/react-hook-form), although for this job, I achieved the [spec](https://firebasestorage.googleapis.com/v0/b/menuenapp-prod.appspot.com/o/Tray.io%20Frontend%20Engineer%20-%20Technical%20Exercise%20(2).pdf?alt=media&token=8643bc4b-7749-4b94-b3ca-0c38d0a1c16d) requirements and further without it.<br/>
+**Built on Hooks:** controlled navigation progress with state persistence.<br/>
+[**Live link**](https://treyway.netlify.app) 👈 onClick
 
 ## How to get started
 1. Open terminal
@@ -14,11 +15,11 @@
 ## Usage
 User can only advance until the last unsubmitted page.<br/>
 To advance further: fill the fields, refill if necessary, hit submit button.<br/>
-User can go back to a previous page and change input values(they persist).
+After validation user will see next page, but he can go back to a previous page and change input values(they persist).
 
 ## Tests
 Run `yarn test`in a new terminal window.<br/>
-Tests are functional and are made from a user point of view, just as how the spec states:
+Tests are functional and made from a user point of view, just as the spec:
 <li style="color:green">Show one page of the form at a time.</li>
 <li style="color:green">Show the current page position of the form.</li>
 <li style="color:green">Validate the input fields upon submission of each page.</li>
@@ -30,8 +31,11 @@ Tests are functional and are made from a user point of view, just as how the spe
 ### Change configuration of a page
 With the current design, each form page is a component, therefore its a matter of editing the corresponding element.
 ### How is navigation implemented
-A useState hook keeps track of the active page and updates with the index of a button mapped from formPages array.
-The progress is also tracked and updates to when a form is submitted.
+This snipped renders three buttons, one for each element in the `formPages`.<br/>
+User clicks on button and the button sets a new state using the index from mapping over `formPages`.<br/>
+Next a `switch` statement asseses what component to render depending on the initial value (0) or the index passed from the previously clicked button.<br/>
+**Notice** how this is a **lowly coupled design.**<br/>
+
 ```javascript
 const formPages = ["User", "Privacy", "Done"];
 const [activePage, setActivePage] = useState(0);
