@@ -75,7 +75,7 @@ I can improve the app with better validation messages by using [react-hook-form]
 
 State can be stored to `localstorage` to persist an accidental reload; alternatively, accidental reload can be prevented by setting an observer on `beforeunload` event.<br/>
 
-React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form), but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
+React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form) library, but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
 <br/>
 
 All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern) in this particular case.
