@@ -32,7 +32,7 @@ Tests are functional and made from a user point of view, just as the spec:
 With the current design, each form page is a component, therefore its a matter of editing the corresponding element.
 ### How is navigation implemented
 Mapping over `formPages` renders three buttons, one for each element in the array.<br/>
-User clicks on a button to navigate, and the button sets a new state using the index from mapping over formPages.`formPages`.<br/>
+User clicks on a button to navigate, and the button sets a new state using the index from mapping over `formPages`.<br/>
 Next, a `switch` statement assesses what component to render depending on the initial value (0) or the index passed from the previously clicked button.<br/>
 **Notice** how this is a **lowly coupled design.**<br/>
 
@@ -64,15 +64,15 @@ const [progress, setProgress] = useState(0);
 ### Add a new page
 In [App.js](https://github.com/vercetti11/trey/blob/db993fba1a183d9370c6fbeefef726631e88724d/src/App.js#L10) do the following:
 1. Insert name of the new page in `const formPages = ["User", "New Page", "Privacy", "Done"];`
-2. Wire up a component in the `Switch` statement with the appropriate index and `props`, in this case, `1`.
+2. Wire up a component in the `Switch` statement with the appropriate index and `props`.
 3. Implement mentioned component as needed.
 
 # Thoughts
-I can improve the app with actual rendered validation messages by using [react-hook-form](https://github.com/react-hook-form/react-hook-form).<br/>
+I can improve the app with better validation messages by using [react-hook-form](https://github.com/react-hook-form/react-hook-form).<br/>
 
-State can be stored to `localstorage` to persist an accidental reload; alternatively, accidental reload could be prevented by setting an observer on `beforeunload event.<br/>
+State can be stored to `localstorage` to persist an accidental reload; alternatively, accidental reload can be prevented by setting an observer on `beforeunload event.<br/>
 
-React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form), but it doesn't mean it is against Redux. The approach I would take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
+React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form), but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
 <br/>
 
 All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern).
