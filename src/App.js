@@ -29,10 +29,9 @@ function App() {
         activePage={activePage}
       />
     </div>
-    // About the navigation //
-    // Button onClick could setActivePage(page) instead of 
-    // setActivePage(index) but it is faster to iterate setting
-    // state manually with a number instead of with a string.`
+    // const [activePage, setActivePage] can use the strings inside the array instead of
+    // their indexes, but then the cases in the switch would also depend on strings which
+    // are more cumbersome to write. Legibility is traded for extensibility.
   );
 }
 
