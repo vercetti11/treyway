@@ -8,7 +8,7 @@
 
 ## How to get started
 1. Open terminal
-2. Run `git clone https://github.com/vercetti11/trey.git`
+2. Run `git clone https://github.com/vercetti11/treyway.git`
 3. Run `npm i`
 4. Run `yarn start`
 
