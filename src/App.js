@@ -17,7 +17,7 @@ function App() {
             key={page}
             disabled={progress < index}
             onClick={() => setActivePage(index)}
-            className={page === formPages[activePage] ? "active" : ""}
+            className={index === activePage ? "active" : ""}
           >
             {page}
           </button>
