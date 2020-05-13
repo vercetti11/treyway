@@ -8,9 +8,10 @@
 
 ## How to get started
 1. Open terminal
-2. Run `git clone https://github.com/vercetti11/trey.git`
-3. Run `npm i`
-4. Run `yarn start`
+2. Run `git clone https://github.com/vercetti11/treyway.git`
+3. Run `cd treyway`
+4. Run `npm i`
+5. Run `yarn start`
 
 ## Usage
 User can only advance until the last unsubmitted page.<br/>
@@ -51,9 +52,9 @@ const [progress, setProgress] = useState(0);
       {page}
     </button>
   ))}
-  // const [activePage, setActivePage] can use the strings inside the array instead of 
-  // their indexes, but then the cases in the switch would also depend on strings which 
-  // are more cumbersome to write. Legibility is traded for extensibility.
+  // const [activePage, setActivePage] can use the strings inside the formPages array  
+  // instead of their indexes, but then the cases in the switch would also depend on 
+  // strings which are more cumbersome to write. Legibility is traded for extensibility.
   
   {...}
   
@@ -75,10 +76,10 @@ I can improve the app with better validation messages by using [react-hook-form]
 
 State can be stored to `localstorage` to persist an accidental reload; alternatively, accidental reload can be prevented by setting an observer on `beforeunload` event.<br/>
 
-React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form), but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
+React Hook Form praises it's superiority to [Redux Form](https://github.com/redux-form/redux-form) library, but it doesn't mean it is against Redux. The approach I take using react-hook-form with Redux is to dispatch actions on submit instead of <input onChange.
 <br/>
 
-All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern).
+All the manual wiring up of components can be abstracted, but that leads to [overengineering](https://en.wikipedia.org/wiki/Anti-pattern) in this particular case.
 
 > Programing it's like gardening.
 
