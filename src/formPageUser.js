@@ -31,6 +31,7 @@ export default function FormPageUser(props) {
         required
         onSetState={onSetState}
         placeholder="**************"
+        pattern={"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$"}
         state={state}
       />
       <button>Submit</button>
@@ -39,7 +40,7 @@ export default function FormPageUser(props) {
 }
 
 const Field = (props) => {
-  const { id, type, required, state, onSetState, placeholder } = props;
+  const { id, type, required, state, onSetState, placeholder, pattern } = props;
   return (
     <div className="field">
       <label htmlFor={id}>
@@ -50,6 +51,7 @@ const Field = (props) => {
         type={type}
         placeholder={placeholder}
         required={required}
+        pattern={pattern}
         onChange={onSetState(id)}
         defaultValue={state[id]}
       />
