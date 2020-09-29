@@ -5,7 +5,7 @@ import DonePage from "./donePage";
 import "./App.css";
 
 function App() {
-  const formPages = ["User", "Privacy", "Done"];
+  const formPages = ["User", "Privacy", "Done"]; // TODO refactor magic strings
   const [activePage, setActivePage] = useState(0);
   const [progress, setProgress] = useState(0);
 
